@@ -7,7 +7,7 @@ pipeline {
     stage("Checkout SCM") {
       steps {
         echo '************* Code Checkout started ************* >'
-        git branch: 'main', credentialsId: 'gitubcred', url: 'https://github.com/bobthebuildur/hello-world';
+        git branch: 'main', credentialsId: 'gitubcred', url: 'https://github.com/bobthebuildur/hello-world.git';
         echo '<************* Checkout completed *************>'
 
       }
