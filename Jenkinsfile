@@ -24,7 +24,7 @@ pipeline {
     stage("Start Containers") {
       steps {
         echo '<************* Starting Container *************>'
-        sh "docker run -d --name mycontainer -p 8080:4287 hello-world:${VERSION} "
+        sh "docker run -d --name mycontainer -p 4287:4287 hello-world:${VERSION} "
         echo '<************* Container started  *************>'
 
       }
