@@ -4,14 +4,7 @@ pipeline {
         VERSION = buildVersionString()
     }
   stages {
-    stage("Checkout SCM") {
-      steps {
-        echo '************* Code Checkout started ************* >'
-        git branch: 'main', credentialsId: 'gitubcred', url: 'https://github.com/bobthebuildur/hello-world.git';
-        echo '<************* Checkout completed *************>'
-
-      }
-    }
+  
     stage("Maven Build") {
       steps {
         echo "************* Building application version ${VERSION} ************* >"
