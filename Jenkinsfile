@@ -16,7 +16,7 @@ pipeline {
     stage("Create Docker Image") {
       steps {
         echo "************* Creating Docker Image ${VERSION}************* >"
-        sh "sudo docker build -t hello-world:${VERSION} ."
+        sh "docker build -t hello-world:${VERSION} ."
         echo '<************* Build completed *************>'
 
       }
