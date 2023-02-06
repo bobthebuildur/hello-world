@@ -8,7 +8,7 @@ pipeline {
     stage("Maven Build") {
       steps {
         echo "************* Building application version ${VERSION} ************* >"
-        sh "mvn clean install"
+        sh "/opt/maven/bin/mvn clean install"
         echo '<************* Build completed *************>'
 
       }
