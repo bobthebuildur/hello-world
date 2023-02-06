@@ -1,6 +1,6 @@
 # Pull base image 
 From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
+RUN sed -i 's/port="8080"/port="4287"/' ${CATALINA_HOME}/conf/server.xml
 COPY ./webapp.war /usr/local/tomcat/webapps
+CMD ["catalina.sh", "run"]
+
