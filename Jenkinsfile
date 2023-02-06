@@ -30,7 +30,6 @@ pipeline {
       steps {
         echo '<************* Stopping old Container *************>'
         sh "docker stop $CONTAINER_NAME"
-       # sh "docker rm $CONTAINER_NAME"
         echo '<************* Old container stopped *************>'
 
         echo '<************* Starting Container *************>'
